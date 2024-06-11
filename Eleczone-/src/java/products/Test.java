@@ -27,6 +27,9 @@ public class Test extends HttpServlet {
          String productName = request.getParameter("productName");
     String productPrice = request.getParameter("productPrice");
         String itemcount = request.getParameter("itemcount");
+        double intcount = Double.parseDouble(itemcount);
+        double price =  Double.parseDouble(productPrice);
+        double total = intcount*price;
         PrintWriter out = response.getWriter();
         out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -35,7 +38,11 @@ public class Test extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>pako</h1>");
-            out.println("<h2>Name "+productName+" price "+productPrice+" count "+itemcount+ "</h2>");  
+            out.println("<h2>Name = "+productName);
+            out.println("price = "+price);
+            out.println("item count = "+intcount);
+            out.println("total = "+total);
+            out.println("</h2>");
             out.println("</body>");
             out.println("</html>");
     }
