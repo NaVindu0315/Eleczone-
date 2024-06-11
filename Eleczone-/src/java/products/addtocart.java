@@ -92,7 +92,7 @@ private static final String url = "jdbc:mysql://localhost:3306/eleczone";
                 out.println("<h3>Error closing database connections: " + e.getMessage() + "</h3>");
             }
         }
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("displaycart");
     }
 
  
