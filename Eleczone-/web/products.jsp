@@ -110,7 +110,7 @@
           <c:forEach var="product" items="${productList}">
             <div class="product-card">
            
-                
+                 <img src="itemimages/test.jpg"  width="80" height="40" alt="Product Image">
               <div class="card-content">
                 <h3>${product.name}</h3>
                 <p>Type: ${product.category}</p>
@@ -118,14 +118,17 @@
                 <p>Price: ${product.price}</p>
               </div>
               <form action="Test" method="post">
-              <div class="buttons">
-                   <input type="hidden" name="productName" value="${product.name}">
-                  <input type="hidden" name="productPrice" value="${product.price}">
-                  <br>
-                  <input type="number" name="itemcount">
-                  <button type="submit">Add to Cart</button>
-                <button>Buy Now</button>
-              </div>
+<div class="buttons">
+  <input type="hidden" name="productName" value="${product.name}">
+  <input type="hidden" name="productPrice" value="${product.price}"> 
+  
+ 
+  <div> <input type="number" name="itemcount" placeholder="Select the count"></div>
+  
+  <br> <!-- Add a line break here -->
+  <button type="submit">Add to Cart</button>
+  <button>Buy Now</button>
+</div>
               </form>
             </div>
           </c:forEach>

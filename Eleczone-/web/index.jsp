@@ -234,10 +234,9 @@
         <label for="item_id">Item ID:</label>
         <input type="text" id="item_id" name="item_id" readomly>
 
-       <!-- <label for="image">Image:</label>
+        <label for="image">Image:</label>
         <input type="file" id="image" name="image">
-       -->
-
+     
         <input type="submit" value="Submit">
     </form>
 	<br>

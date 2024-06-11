@@ -6,7 +6,9 @@
 package products;
 
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,6 +20,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 /**
  *
@@ -47,6 +50,28 @@ private static final long serialVersionUID = 1L;
         double price = Double.parseDouble(request.getParameter("price"));
         
         
+        ///to process the image
+        Part file = request.getPart("image");
+        
+        String imageFileName=file.getSubmittedFileName();
+        
+        ///chnge this upload path according to ur pc
+        String uploadPath="F:/other projects/Eleczone-/Eleczone-/web/itemimages/"+imageFileName;
+        System.out.println(uploadPath);
+        FileOutputStream fos = new FileOutputStream(uploadPath);
+        InputStream is = file.getInputStream();
+        try{
+        byte[] data = new byte[is.available()];
+        is.read(data);
+        fos.write(data);
+        fos.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        
+        
         Connection connection = null;
         PreparedStatement st = null;
         
@@ -61,13 +86,14 @@ private static final long serialVersionUID = 1L;
             String id = UUID.randomUUID().toString();
             
            
-            String sql = "INSERT INTO products (id, name, price,category,description) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO products (id, name, price,category,description,img) VALUES (?, ?, ?, ?, ?,?)";
             st = connection.prepareStatement(sql);
             st.setString(1, id);
             st.setString(2, name);
             st.setDouble(3, price);
             st.setString(4, category);
             st.setString(5, description);
+            st.setString(6, imageFileName);
             
            
            
