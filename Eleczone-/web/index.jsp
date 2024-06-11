@@ -211,7 +211,7 @@
 </head>
 <body>
     <h1>ADD PRODUCTS</h1>
-    <form id="itemForm" action="ProductsInsert" method="POST" enctype="multipart/form-data">
+    <form id="itemForm" action="ProductInsert" method="POST" enctype="multipart/form-data">
         <label for="item_name">Item Name:</label>
         <input type="text" id="item_name" name="item_name" placeholder="Item Name">
 
@@ -234,8 +234,9 @@
         <label for="item_id">Item ID:</label>
         <input type="text" id="item_id" name="item_id" readomly>
 
-        <label for="image">Image:</label>
+       <!-- <label for="image">Image:</label>
         <input type="file" id="image" name="image">
+       -->
 
         <input type="submit" value="Submit">
     </form>
