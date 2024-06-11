@@ -57,6 +57,8 @@ public class Productservlet extends HttpServlet {
                 product.setCategory(rs.getString("category"));
                 product.setDescription(rs.getString("description"));
                 product.setPrice(rs.getDouble("price"));
+                product.setimg(rs.getString("img"));
+                
                 
                
                 productList.add(product);

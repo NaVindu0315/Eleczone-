@@ -110,7 +110,7 @@
           <c:forEach var="product" items="${productList}">
             <div class="product-card">
            
-                 <img src="itemimages/test.jpg"  width="80" height="40" alt="Product Image">
+                 <img src="itemimages/${product.img}"  width="80" height="40" alt="Product Image">
               <div class="card-content">
                 <h3>${product.name}</h3>
                 <p>Type: ${product.category}</p>

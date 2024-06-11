@@ -5,6 +5,7 @@ public class Product {
     private String category;
     private String description;
     private double price;
+    private String img;
     
 
     
@@ -47,6 +48,14 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+    
+    public String getimg() {
+        return img;
+    }
+
+    public void setimg(String img) {
+        this.img = img;
     }
 
   
