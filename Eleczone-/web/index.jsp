@@ -243,6 +243,7 @@
 	<br>
 
    <center><a href="dashboard.jsp" class="button">Dashboard</a></center>
+   <center><a href="products.jsp" class="button">Products</a></center>
 
 <br>
 
