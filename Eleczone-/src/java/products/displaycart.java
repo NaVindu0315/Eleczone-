@@ -93,8 +93,8 @@ out.println("<div align='center'>");
 out.println("<hr>");
 out.println("Total Amount = "+totalAmount);
 out.println("</div");
-out.print("<center><a href=\"dashboard.jsp\" class=\"button\">Dashboard</a></center>");
-out.print("<center><a href=\"products.jsp\" class=\"button\">Products</a></center>");
+out.print("<center><a href=\"index.jsp\" class=\"button\">Dashboard</a></center>");
+out.print("<center><form action=\"clearcart\" method=\"post\"><input type=\"submit\" value=\"Clear Cart\" class=\"button\"></form></center>");
     } catch (Exception e) {
         out.println("<h3>Error: " + e.getMessage() + "</h3>");
     } finally {
