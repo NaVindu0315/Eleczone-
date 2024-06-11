@@ -29,6 +29,8 @@ public class Test extends HttpServlet {
         String itemcount = request.getParameter("itemcount");
         double intcount = Double.parseDouble(itemcount);
         double price =  Double.parseDouble(productPrice);
+        
+        
         double total = intcount*price;
         PrintWriter out = response.getWriter();
         out.println("<!DOCTYPE html>");

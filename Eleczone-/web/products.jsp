@@ -117,7 +117,7 @@
                 <p>Info: ${product.description}</p>
                 <p>Price: ${product.price}</p>
               </div>
-              <form action="Test" method="post">
+              <form action="addtocart" method="post">
 <div class="buttons">
   <input type="hidden" name="productName" value="${product.name}">
   <input type="hidden" name="productPrice" value="${product.price}"> 
