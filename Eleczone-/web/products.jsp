@@ -106,6 +106,10 @@
     <div class="container">
       <div class="content">
         <h2>Products</h2>
+        <a href="index.jsp" class=\"button\">Add new Item</a>
+        <form action="displaycart" method="get" >
+            <input type="submit" class="button" value="view Cart">
+</form>
         <div class="product-grid">
           <c:forEach var="product" items="${productList}">
             <div class="product-card">

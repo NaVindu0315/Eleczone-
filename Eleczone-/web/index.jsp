@@ -240,8 +240,9 @@
         <input type="submit" value="Submit">
     </form>
 	<br>
-
-   <center><a href="dashboard.jsp" class="button">Dashboard</a></center>
+<form action="displaycart" method="get" >
+    <input type="submit" class="button" value="view Cart">
+</form>
    <center><a href="products.jsp" class="button">Products</a></center>
 
 <br>
