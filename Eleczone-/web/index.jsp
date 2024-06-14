@@ -244,6 +244,8 @@
     <input type="submit" class="button" value="view Cart">
 </form>
    <center><a href="products.jsp" class="button">Products</a></center>
+   
+   <center><a href="imgtest.jsp" class="button">Image Test</a></center>
 
 <br>
 
